@@ -22,6 +22,7 @@ services:
   # Node.js Backend
   backend:
     build: ./backend
+    image: dstixx05/e-commerce-backend:v1.0
     container_name: ecommerce-backend
     environment:
       DB_USER: ${DB_USER}
@@ -43,6 +44,7 @@ services:
   # React Frontend
   frontend:
     build: ./frontend
+    image: dstixx05/e-commerce-frontend:v1.0
     container_name: ecommerce-frontend
     ports:
       - "8080:3000"
