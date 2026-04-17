@@ -1,0 +1,22 @@
+name: Git Actions CI
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out repository code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Run one-line script
+        run: echo "Just tesing my one line."
+
+      - name: Check node version
+        run: node -v
+
+      - name: Push images to Docker hub
+        run: |
+          docker compose push e-commerce-frontend:v1.0
+          docker compose push e-commerce-backend:v1.0

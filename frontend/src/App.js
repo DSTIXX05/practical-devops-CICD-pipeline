@@ -36,7 +36,7 @@ function App() {
 					<div key={p.id} className="card">
 						<h3>{p.name}</h3>
 						<p>${p.price}</p>
-						<button>Add 2 Cart</button>
+						<button>Add to Cart</button>
 					</div>
 				))}
 			</div>
