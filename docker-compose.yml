@@ -47,7 +47,7 @@ services:
     image: dstixx05/e-commerce-frontend:v1.0
     container_name: ecommerce-frontend
     ports:
-      - "8080:3000"
+      - "3000:3000"
     depends_on:
       - backend
     networks:
